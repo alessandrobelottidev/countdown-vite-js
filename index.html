@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://cdn.jsdelivr.net/npm/daisyui@2.31.0/dist/full.css" rel="stylesheet" type="text/css" />
+    	<script src="https://cdn.tailwindcss.com"></script>
+		<title>Vite App</title>
+  </head>
+  <body>
+	<!-- App -->
+    <div id="app" class="min-h-screen flex flex-col items-center justify-center p-8 bg-slate-100 dark:bg-slate-700 bg-image-2">
+
+		<!-- Card -->
+		<div class="rounded-lg p-8 shadow-lg max-w-sm w-full bg-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900">
+			<!-- Title -->
+			<h1 class="text-2xl text-center font-bold mb-4">⌛ Countdown timer</h1>
+			
+			<!-- Countdown timer -->
+			<div id="countdown" class="flex justify-center mb-4 hidden">
+				<div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+					<div class="flex flex-col">
+					<span class="countdown font-mono text-5xl">
+						<span id="minutiDisplay" style="--value:0;"></span>
+					</span>
+					min
+					</div> 
+					<div class="flex flex-col">
+					<span class="countdown font-mono text-5xl">
+						<span id="secondiDisplay" style="--value:0;"></span>
+					</span>
+					sec
+					</div>
+				</div>
+			</div>
+	
+			<!-- Input fields -->
+			<div id="inputFields" class="flex flex-col items-center mb-4">
+				<div class="form-control w-full max-w-xs">
+					<label class="label">
+					<span class="label-text">Minuti</span>
+					</label>
+					<input type="number" min="0" max="59" placeholder="es. 20" class="input input-bordered w-full max-w-xs" id="minutiInput" />
+					<label class="label">
+					<span class="label-text-alt">0-59</span>
+					</label>
+				</div>
+	
+				<div class="form-control w-full max-w-xs">
+					<label class="label">
+					<span class="label-text">Secondi</span>
+					</label>
+					<input type="number" min="0" max="59" placeholder="es. 00" class="input input-bordered w-full max-w-xs" id="secondiInput" />
+					<label class="label">
+					<span class="label-text-alt">0-59</span>
+					</label>
+				</div>
+			</div>
+	
+			<!-- Action buttons -->
+			<div class="flex justify-center">
+				<button class="btn btn-success mr-2" id="avvioBtn">AVVIA ⏵</button>
+				<button class="btn btn-error" id="resetBtn">RESET ⭯</button>
+			</div>
+		</div>
+		
+		<!-- Credits -->
+		<p class="pt-2">
+			Made by
+			<a href="https://github.com/alessandrobelottidev" target="_blank" class="text-sky-500">@alessandrobelottidev</a>
+		</p>
+
+	</div>
+		
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
